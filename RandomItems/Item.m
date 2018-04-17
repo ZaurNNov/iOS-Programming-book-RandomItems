@@ -77,6 +77,11 @@
     return [self initWithItemName:@"Item"];
 }
 
+// Challenge init
+-(instancetype)initWithItemName:(NSString *)name serialNumber:(NSString *)serialNum {
+    return [self initWithItemName:name valueInDollars:0 serialNumber:serialNum];
+}
+
 //setters
 -(void)setItemName:(NSString *)str {
     _itemName = str;
@@ -121,7 +126,7 @@
 
 // Dealloc
 -(void)dealloc {
-    NSLog(@"<Dealloc *Item>");
+//    NSLog(@"<Dealloc *Item>");
 //    NSLog(@"\n<Dealloc: %@ >", self.description);
 }
 

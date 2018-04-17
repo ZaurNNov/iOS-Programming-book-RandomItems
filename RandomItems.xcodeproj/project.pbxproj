@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CEFF0ABD208616AA001ED91C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFF0ABC208616AA001ED91C /* main.m */; };
 		CEFF0AC520861964001ED91C /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFF0AC420861964001ED91C /* Item.m */; };
+		CEFF0AC820863410001ED91C /* Container.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFF0AC720863410001ED91C /* Container.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		CEFF0ABC208616AA001ED91C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEFF0AC320861964001ED91C /* Item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		CEFF0AC420861964001ED91C /* Item.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		CEFF0AC620863410001ED91C /* Container.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Container.h; sourceTree = "<group>"; };
+		CEFF0AC720863410001ED91C /* Container.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Container.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				CEFF0ABC208616AA001ED91C /* main.m */,
 				CEFF0AC320861964001ED91C /* Item.h */,
 				CEFF0AC420861964001ED91C /* Item.m */,
+				CEFF0AC620863410001ED91C /* Container.h */,
+				CEFF0AC720863410001ED91C /* Container.m */,
 			);
 			path = RandomItems;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFF0AC820863410001ED91C /* Container.m in Sources */,
 				CEFF0AC520861964001ED91C /* Item.m in Sources */,
 				CEFF0ABD208616AA001ED91C /* main.m in Sources */,
 			);
