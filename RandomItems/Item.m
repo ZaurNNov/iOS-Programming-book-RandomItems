@@ -6,7 +6,12 @@
 //  Copyright © 2018 Zaur Giyasov. All rights reserved.
 //
 
+
 #import "Item.h"
+
+//@interface Item()
+
+//@end
 
 @implementation Item
 
@@ -82,6 +87,39 @@
     return [self initWithItemName:name valueInDollars:0 serialNumber:serialNum];
 }
 
+
+// Override Description
+-(NSString *)description {
+    NSString *descriptionString =
+    [[NSString alloc] initWithFormat:@"%@ (%@): Worth $%d, recorded on %@",
+     self.itemName,
+     self.serialNumber,
+     self.valueInDollars,
+     self.dateCreated];
+    
+    return descriptionString;
+}
+
+// Dealloc
+-(void)dealloc {
+    NSLog(@"<Dealloc *Item>");
+        //    NSLog(@"\n<Dealloc: %@ >", self.description);
+}
+
+// accessors and properties
+-(void)setItemName:(NSString *)itemName {
+    _itemName = [itemName copy];
+}
+
+-(void)setContainedItem:(Item *)containedItem {
+    _containedItem = containedItem;
+    self.containedItem.container = self;
+}
+
+@end
+
+///////////////////////////////////////////////////
+/* 3 - 1
 //setters
 -(void)setItemName:(NSString *)str {
     _itemName = str;
@@ -129,25 +167,6 @@
 - (void)setContainer:(Item *)item {
     _container = item;
 }
+ 
+ */
 
-
-// Override Description
--(NSString *)description {
-    NSString *descriptionString =
-    [[NSString alloc] initWithFormat:@"%@ (%@): Worth $%d, recorded on %@",
-     self.itemName,
-     self.serialNumber,
-     self.valueInDollars,
-     self.dateCreated];
-    
-    return descriptionString;
-}
-
-// Dealloc
--(void)dealloc {
-    NSLog(@"<Dealloc *Item>");
-//    NSLog(@"\n<Dealloc: %@ >", self.description);
-}
-
-
-@end
