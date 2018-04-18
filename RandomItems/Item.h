@@ -14,6 +14,10 @@
     NSString *_serialNumber;
     int _valueInDollars;
     NSDate *_dateCreated;
+    
+    // 3 - 1
+    Item *_containedItem;
+    Item *_container;
 }
 
 // Class methods
@@ -36,5 +40,10 @@
 
 - (NSDate *)dateCreated;
 
+// 3 - 1
+- (void)setContainedItem: (Item *)item;
+- (Item *)containedItem;
+- (void)setContainer: (Item *)item;
+- (Item *)container;
 
 @end

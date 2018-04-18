@@ -112,6 +112,25 @@
     return  _dateCreated;
 }
 
+// 3-1
+- (void)setContainedItem: (Item *)item {
+    _containedItem = item;
+    item.container = self;
+}
+
+- (Item *)container {
+    return _container;
+}
+
+- (Item *)containedItem {
+    return _containedItem;
+}
+
+- (void)setContainer:(Item *)item {
+    _container = item;
+}
+
+
 // Override Description
 -(NSString *)description {
     NSString *descriptionString =
@@ -126,7 +145,7 @@
 
 // Dealloc
 -(void)dealloc {
-//    NSLog(@"<Dealloc *Item>");
+    NSLog(@"<Dealloc *Item>");
 //    NSLog(@"\n<Dealloc: %@ >", self.description);
 }
 

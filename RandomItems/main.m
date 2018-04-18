@@ -116,7 +116,7 @@ int main(int argc, const char * argv[]) {
         /*
         Gold Challenge: Another Class
         
-         */
+        
         // Creating a muttable array
         NSMutableArray *items = [[NSMutableArray alloc]init];
         // Create Stock Items (new class)
@@ -135,6 +135,31 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Put 10 items in 1 container and log it");
         containerItems.subitems = items;
         NSLog(@"%@", containerItems.description);
+         
+        */
+        
+        // 3 - 1
+        // Creating a muttable array
+        NSMutableArray *items = [[NSMutableArray alloc]init];
+        Item *backpack = [[Item alloc]initWithItemName:@"Backpack"];
+        [items addObject:backpack];
+        
+        Item *calculator = [[Item alloc]initWithItemName:@"Calculator"];
+        [items addObject:calculator];
+        
+        backpack.containedItem = calculator;
+        
+        NSLog(@"Print Items");
+        for (Item *temp in items) {
+            NSLog(@"\n%@", temp);
+        }
+        
+        // dealloc
+        backpack = nil;
+        calculator = nil;
+        items = nil;
+        
+        
 
     }
     return 0;
