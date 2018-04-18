@@ -17,7 +17,7 @@
     
     // 3 - 1
     Item *_containedItem;
-    Item *_container;
+    __weak Item *_container;
 }
 
 // Class methods
